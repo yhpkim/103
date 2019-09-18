@@ -1,6 +1,6 @@
-:title: Spinnaker & k8s
+:title: Spinnaker & K8S
 :author: Thomas A. McGonagle
-:keywords: Spinnaker, k8s, kubernetes
+:keywords: Spinnaker, K8S, kubernetes, helm
 :skip-help: true
 :css: presentation.css
 
@@ -24,7 +24,7 @@
 
 :id: title-slide
 
-Spinnaker & k8s
+Spinnaker & K8S
 ===============
 9/23/19 - 9/26/19
 -----------------
@@ -41,19 +41,30 @@ Spinnaker & k8s
 Agenda
 ======
 
-* whoami
-
-* Administrvia
-
-* Spinnaker and DevOps Overview
-
-* CI/CD and Continuous Improvement
-
-* Docker and k8s
+* Intro, Goals, Assumptions
+* Background & Philosophy & Terminology
+* Spinnaker Archtecture 
+* Creating a Spinnaker Application
 
 .. note::
+    * note
 
-  * note
+----
+
+:id: agenda-cont
+
+Agenda cont.
+=============
+
+* Introductions to Pipelines
+* Working with Helm
+* Pipeline Strategies
+* Introduction to Spring Expression Language (SpEL)
+* Deploying Stateful Applications
+* Debugging Pipelines
+
+.. note::
+    * note
 
 ----
 
@@ -76,7 +87,6 @@ thomas.mcgonagle@armory.io
 
 .. note::
   * note
-
 
 ----
 
@@ -141,8 +151,6 @@ Training Philosophy
     :width: 250px
     :align: left
 
-
-
 .. image:: images/socrates.png 
     :height: 175px
     :width: 250px
@@ -177,7 +185,6 @@ DevOps Tenants - ACAMS+
 * Plus...
 
 .. note::
-
     * note
 
 ----
@@ -194,7 +201,6 @@ DevOps Practices
     :target: https://www.dropbox.com/s/wj2jzq66oih030q/enterprise-devops-playbook.pdf?dl=0
 
 .. note::
-
     * note
 
 ----
@@ -211,7 +217,6 @@ hovercraft
     :target: https://hovercraft.readthedocs.io/en/latest/index.html
 
 .. note::
-
     * note
 
 ----
@@ -227,7 +232,6 @@ Continuous Improvement
     :align: center
 
 .. note::
-
     * note
 
 ----
@@ -243,7 +247,6 @@ Three Ways
     :align: center
 
 .. note::
-
     * note
 
 ----
@@ -259,7 +262,6 @@ Dog Food
     :align: center
 
 .. note::
-
     * note
 
 ----
@@ -275,7 +277,6 @@ CI/CD
     :align: center
 
 .. note::
-
     * note
 
 ----
@@ -306,7 +307,6 @@ Docker Desktop
     :target: https://www.docker.com/products/docker-desktop
 
 .. note::
-
     * note
 
 ----
@@ -323,7 +323,6 @@ GitHub Desktop
     :target: https://desktop.github.com/ 
 
 .. note::
-
     * note
 
 ----
@@ -340,7 +339,6 @@ Visual Studio Code
     :target: https://code.visualstudio.com/
 
 .. note::
-
     * note
 
 ----
@@ -357,7 +355,6 @@ Home Brew
     :target: https://brew.sh/
 
 .. note::
-
     * note
 
 ----
@@ -375,7 +372,6 @@ brew install
    brew install kubectx
 
 .. note::
-
     * note
 
 ----
@@ -404,7 +400,6 @@ Make a Change and then....
 
 
 .. note::
-
     * note
 
 ----
@@ -423,7 +418,6 @@ Exercise 1 - k8s
     kubectl -n default port-forward services/103 9000:9000
 
 .. note::
-
     * note
 
 ----
@@ -445,7 +439,6 @@ Exercise 1 - helm
 
 
 .. note::
-
     * note
 
 ----
@@ -560,38 +553,6 @@ Spinnaker is a Pluggable, Cloud Native Platform
 
 Before We Start...
 ==================
-
-.. note::
-    * note
-
-----
-
-:id: cover-today
-
-What are we going to cover today?
-=================================
-
-* Intro, Goals, Assumptions
-* Background & Philosophy & Terminology
-* Spinnaker Archtecture 
-* Creating a Spinnaker Application
-
-.. note::
-    * note
-
-----
-
-:id: cover-today-cont
-
-What are we going to cover today cont.?
-=======================================
-
-* Introductions to Pipelines
-* Working with Helm
-* Pipeline Strategies
-* Introduction to Spring Expression Language (SpEL)
-* Deploying Stateful Applications
-* Debugging Pipelines
 
 .. note::
     * note
@@ -1089,12 +1050,17 @@ Spring Expression Language(SpEL) Introduction
 
 About SpEL
 ==========
-* Add logic to pipelines
-* Used mostly to eval variables
+
+Add logic to pipelines
+
+Used mostly to eval variables
+
     * Set vars from build systems
     * Pass image names between stages
     * Retrieve and eval manual judge responses
-* Can do much more
+
+Can do much more
+
     * Embed java/groovy
 
 .. note::
@@ -1106,15 +1072,23 @@ About SpEL
 
 Spring Expressions
 ==================
+
 What does a Spring Expression look like?
-* A shell variable
+
+    * A shell variable
+
 Where can I use them?
-* Any place in the UI where you can enter free-form text
-* In the "Edit Pipeline JSON" tool
+
+    * Any place in the UI where you can enter free-form text
+    * In the "Edit Pipeline JSON" tool
+
 When are they evaulated?
-* At stage execution time
+
+    * At stage execution time
+
 Any exceptions?
-* Yes, can't use during pipeline configuration stage
+
+    * Yes, can't use during pipeline configuration stage
 
 .. note::
     * note
@@ -1230,15 +1204,14 @@ Questions?
 Presentation available at: https://github.com/mcgonagle/103
 
 .. note::
-
     * note
 
 ----
 
 :id: thank-you
 
-Thank You Very Much
-===================
+Thank You Very Much!
+====================
 Thomas A. McGonagle
 -------------------
 Solutions Architect

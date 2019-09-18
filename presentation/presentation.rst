@@ -239,11 +239,11 @@ hovercraft
     :align: center 
     :target: https://hovercraft.readthedocs.io/en/latest/index.html
 
- .. note::
+.. note::
 
     * note
 
- ----
+----
 
 :id: continuous-improvement 
 
@@ -435,8 +435,6 @@ brew install
 .. note::
 
     * note
-
-----
 
 ----
 
@@ -716,6 +714,10 @@ What is a Project?
 
 Think of this as your Product
 
+.. image:: images/project.png
+    :height: 640px
+    :width: 1080px
+    :align: center
 
 .. note::
     * note
@@ -730,6 +732,11 @@ Applications
 Applications are deployable artifacts
 
 Applications map to a single repo
+
+.. image:: images/application.png
+    :height: 640px
+    :width: 1080px
+    :align: center
 
 
 .. note::
@@ -775,6 +782,11 @@ Creating a Pipeline
 
 Pipeline names are freeform
 
+.. image:: images/pipeline.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
 .. note::
     * note
 
@@ -784,6 +796,12 @@ Pipeline names are freeform
 
 Pipeline Configuration
 ======================
+
+.. image:: images/pipeline_configuration.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
 
 .. note::
     * note
@@ -797,12 +815,12 @@ Pipeline Triggers
 =================
 
 Triggers tell Spinnaker when to start a pipeline
-* Code Commits
-* CI Builds
-* New package or container versions
-* WebHooks
-* Scheduled
-* Other Pipelines
+    - Code Commits
+    - CI Builds
+    - New package or container versions
+    - WebHooks
+    - Scheduled
+    - Other Pipelines
 
 .. note::
     * note
@@ -817,6 +835,13 @@ The Git Trigger
 It's just a webhook!
 But its a special webhook.
 
+
+.. image:: images/git_trigger.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+
 .. note::
     * note
 
@@ -828,15 +853,15 @@ Stages Overview
 ===============
 
 Stages are automated steps of your SDLC
-* Software builds in your CI tool
-* Automated tests
-* Manual tests or judgments
-* Deployments
-* Scaling activities
-* Baking (creating) a new image
-* Evaulations
-* Wait stage
-* Much more...
+    - Software builds in your CI tool
+    - Automated tests
+    - Manual tests or judgments
+    - Deployments
+    - Scaling activities
+    - Baking (creating) a new image
+    - Evaulations
+    - Wait stage
+    - Much more...
 
 
 .. note::
@@ -852,6 +877,11 @@ Wait Stage
 Introduces an arbitrary wait
 Why might we want this?
 
+.. image:: images/wait_stage.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
 .. note::
     * note
 
@@ -864,6 +894,13 @@ Manual Judgment Stage
 =====================
 
 Use a Manual Judgment as a human gate to your next stage
+
+
+.. image:: images/manual_judgement.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
 
 .. note::
     * note
@@ -878,6 +915,11 @@ Execution Options
 
 These are common to all stages
 
+.. image:: images/execution_options.png
+    :height: 450px
+    :width: 1080px
+    :align: center
+
 .. note::
     * note
 
@@ -888,6 +930,10 @@ These are common to all stages
 Executing a Pipeline
 ====================
 
+.. image:: images/executing_pipeline.png
+    :height: 640px
+    :width: 1080px
+    :align: center
 
 .. note::
     * note
@@ -900,6 +946,10 @@ Executing a Pipeline
 Demo - Working with the GitHub UI
 =================================
 
+.. image:: images/demo_github.png
+    :height: 450px
+    :width: 1080px
+    :align: center
 
 .. note::
     * note
@@ -920,19 +970,78 @@ Exercise 2
     - Add a GitHub trigger for your branch of the spintroui repo
     - Add a Wait stage to your pipeline
 
- 4. 	Add a Manual Judgement stage to your pipeline
+ 4. Add a Manual Judgement stage to your pipeline
     - Provide the user with a custom prompt
 
-Update the Readme with your username in your branch and git push; 
-Don’t forget to click Save!
-
-
-
+    Update the Readme with your username in your branch and git push; 
+    Don’t forget to click Save!
 
 .. note::
     * note
 
 ----
+
+:id: working-with-helm
+
+Working with Helm
+=================
+
+.. note::
+    * note
+
+----
+
+:id: helm-chart-artifacts
+
+Helm Chart Artifacts
+====================
+
+.. note::
+    * note
+
+----
+
+
+:id: baking-manifests
+
+Baking Manifests
+================
+
+.. note::
+    * note
+
+----
+
+:id: deploying-manifests
+
+Deploying Manifests
+===================
+
+.. note::
+    * note
+
+----
+
+:id: working-with-services
+
+Working with Services
+=====================
+
+.. note::
+    * note
+
+----
+
+:id: health-checks-kubernetes
+
+Kubernetes Health Checks
+========================
+
+.. note::
+    * note
+
+----
+
 
 :id: questions
 

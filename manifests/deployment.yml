@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    run: 103
-  name: 103
+    run: "103"
+  name: "103"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: 103
+      run: "103"
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        run: 103
+        run: "103"
     spec:
       containers:
       - image: mcgonagle/103
-        name: 103
+        name: "103"
         resources: {}
 status: {}

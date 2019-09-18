@@ -3,14 +3,14 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    run: 103
-  name: 103
+    run: "103"
+  name: "103"
 spec:
   ports:
   - port: 9000
     protocol: TCP
     targetPort: 9000
   selector:
-    run: 103
+    run: "103"
 status:
   loadBalancer: {}

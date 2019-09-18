@@ -280,48 +280,6 @@ CI/CD
 
 ----
 
-:id: docker
-
-docker
-======
-
-Make a Change and then....
-
-.. code:: python
-
-    docker build --tag=mcgonagle/103 . 
-    
-    docker run -it --rm -p "9000:9000" mcgonagle/103
-
-.. note::
-
-    * note
-
-----
-
-:id: k8s
-
-k8s
-===
-
-.. code:: python
-
-    docker build --tag=mcgonagle/103 .
-
-    docker push mcgonagle/103:latest
-
-    kubectl -n default run 103 --image=mcgonagle/sharkhack 
-
-    kubectl -n default expose deployment/103 --port=9000 --target-port=9000
-
-    kubectl -n default port-forward services/103 9000:9000
-
-.. note::
-
-    * note
-
-----
-
 :id: instrument 
 
 Play your Computer Like an Instrument
@@ -411,9 +369,80 @@ brew install
 
 .. code:: python
 
+
    brew install kubernetes-helm
 
    brew install kubectx
+
+.. note::
+
+    * note
+
+----
+
+
+:id: docker
+
+Exercise 1 - docker
+======
+
+Make a Change and then....
+
+.. code:: python
+
+    git clone git@github.com:mcgonagle/103.git
+
+    docker build --tag=mcgonagle/103 . 
+    
+    docker run -it --rm -p "9000:9000" mcgonagle/103
+
+    docker login
+
+    docker build --tag=mcgonagle/103 .
+
+    docker push mcgonagle/103:latest
+
+
+.. note::
+
+    * note
+
+----
+
+:id: k8s
+
+Exercise 1 - k8s
+===
+
+.. code:: python
+
+    kubectl -n default run 103 --image=mcgonagle/sharkhack 
+
+    kubectl -n default expose deployment/103 --port=9000 --target-port=9000
+
+    kubectl -n default port-forward services/103 9000:9000
+
+.. note::
+
+    * note
+
+----
+
+:id: helm 
+
+Exercise 1 - helm
+====
+
+.. code:: python
+
+    helm init --service-account tiller --history-max 200 --upgrade
+
+    helm create 103
+
+    helm install --dry-run --debug ./103
+
+    helm delete --purge 103
+
 
 .. note::
 
@@ -728,26 +757,6 @@ Applications map to a single repo
 
 ----
 
-:id: exercise-1
-
-Exercise 1
-============
-
-Create a project and an application
- - Project name should be ${username}Project1
- - Applications should be named ${username}UI
- - Applications must include the cloud providers
-   - kubernetes
-   - AWS
- - Leave the “Repo Type” BLANK
- - Check -> Instance Health: Consider only cloud provider health...
- - Add your application to the project
-
-.. note::
-    * note
-
-----
-
 :id: introduction-to-pipelines
 
 Introduction to Pipelines
@@ -945,20 +954,10 @@ Demo - Working with the GitHub UI
 Exercise 2
 ==========
 
-1. Clone the GitHub repo https://github.com/armory-training/spintroui
-
-2. Create and push a new branch to the repo called “dev-${username}”
-
-3. Create a pipeline in your ${username}UI application
-    - Pipeline should be called “Bake and Deploy”
-    - Add a GitHub trigger for your branch of the spintroui repo
-    - Add a Wait stage to your pipeline
-
- 4. Add a Manual Judgement stage to your pipeline
-    - Provide the user with a custom prompt
-
-    Update the Readme with your username in your branch and git push; 
-    Don’t forget to click Save!
+1. Create a pipeline that promotes a manifest from dev to production
+2. Create a pipeline that promotes a manifest to production in two clusters concurrenlty
+3. Create a pipeline that promotes to two production clusters sequentially with a manual judgment
+4. Create a pipeline that takes an action only if a condition is met
 
 .. note::
     * note
@@ -1119,6 +1118,7 @@ Any exceptions?
 
 .. note::
     * note
+
 ----
 
 :id: expression-tool 
@@ -1133,6 +1133,7 @@ Expression Tools - Helper Functions
 
 .. note::
     * note
+
 ----
 
 :id: expression-tool-helper
@@ -1200,6 +1201,20 @@ Debugging Bakes
 
 Debugging Deployments
 =====================
+
+.. note::
+    * note
+
+----
+
+:id: exercise-3
+
+Exercise 3
+==========
+
+1. Create a pipeline that takes an action only if a condition is met
+2. Create a pipeline that deploys a stateful application, observe what happens when updated
+3. Break a pipeline and debug it
 
 .. note::
     * note

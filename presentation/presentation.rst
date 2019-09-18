@@ -1001,6 +1001,11 @@ Pipeline Strategies
 Promotional Pipelines
 =====================
 
+.. image:: images/promotional_pipeline.png
+    :height: 450px
+    :width: 1080px
+    :align: center
+
 .. note::
     * note
 
@@ -1011,6 +1016,11 @@ Promotional Pipelines
 Branching Pipelines
 =====================
 
+.. image:: images/branching_pipeline.png
+    :height: 450px
+    :width: 1080px
+    :align: center
+
 .. note::
     * note
 
@@ -1020,6 +1030,11 @@ Branching Pipelines
 
 Halting Pipelines
 =================
+
+.. image:: images/halting_pipeline.png
+    :height: 450px
+    :width: 1080px
+    :align: center
 
 .. note::
     * note
@@ -1166,6 +1181,11 @@ Debugging Pipelines
 Debugging Bakes
 ===============
 
+.. image:: images/bug.png
+    :height: 512px
+    :width: 512px
+    :align: center
+
 .. note::
     * note
 
@@ -1175,6 +1195,11 @@ Debugging Bakes
 
 Debugging Deployments
 =====================
+
+.. image:: images/bug.png
+    :height: 512px
+    :width: 512px
+    :align: center
 
 .. note::
     * note

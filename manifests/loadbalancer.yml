@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: "103"
-  name: 103-0
+  name: hundredthree-0
 spec:
   ports:
   - port: 9000

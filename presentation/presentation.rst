@@ -164,35 +164,6 @@ Fun Learning Strategies
 
 ----
 
-:id: instrument 
-
-Play your Computer Like an Instrument
-=====================================
-
-.. image::  https://cdn.shopify.com/s/files/1/0182/0563/products/MaestroVNTop_682x1800_7159c927-5752-43e0-9c2e-a19df87bf18b_800x.JPG?v=1551819005
-    :height: 600px
-    :width: 600px
-
-.. note::
-  * note
-
-----
-
-:id: devops-definition
-
-DevOps Definition
-=================
-
-Technical and **Cultural** focus on **Teamwork** and the software delivery **Mission** 
---------------------------------------------------------------------------------------
-
-.. note::
-
-    * note
-
-
-----
-
 :id: devops-tenants
 
 DevOps Tenants - ACAMS+
@@ -318,9 +289,9 @@ Make a Change and then....
 
 .. code:: python
 
-    docker build --tag=mcgonagle/sharkhack . 
+    docker build --tag=mcgonagle/103 . 
     
-    docker run -it --rm -p "9000:9000" mcgonagle/sharkhack
+    docker run -it --rm -p "9000:9000" mcgonagle/103
 
 .. note::
 
@@ -335,19 +306,33 @@ k8s
 
 .. code:: python
 
-    docker build --tag=mcgonagle/sharhack .
+    docker build --tag=mcgonagle/103 .
 
-    docker push mcgonagle/sharkhack:latest
+    docker push mcgonagle/103:latest
 
-    kubectl -n default run sharkhack --image=mcgonagle/sharkhack 
+    kubectl -n default run 103 --image=mcgonagle/sharkhack 
 
-    kubectl -n default expose deployment/sharkhack --port=9000 --target-port=9000
+    kubectl -n default expose deployment/103 --port=9000 --target-port=9000
 
-    kubectl -n default port-forward services/sharkhack 9000:9000
+    kubectl -n default port-forward services/103 9000:9000
 
 .. note::
 
     * note
+
+----
+
+:id: instrument 
+
+Play your Computer Like an Instrument
+=====================================
+
+.. image::  https://cdn.shopify.com/s/files/1/0182/0563/products/MaestroVNTop_682x1800_7159c927-5752-43e0-9c2e-a19df87bf18b_800x.JPG?v=1551819005
+    :height: 600px
+    :width: 600px
+
+.. note::
+  * note
 
 ----
 
@@ -361,8 +346,6 @@ Docker Desktop
     :width: 800px
     :align: center 
     :target: https://www.docker.com/products/docker-desktop
-
-
 
 .. note::
 
@@ -561,8 +544,8 @@ What are we going to cover today?
 
 * Intro, Goals, Assumptions
 * Background & Philosophy & Terminology
-* Archtecture 
-* Projects and Application in Spinnaker
+* Spinnaker Archtecture 
+* Creating a Spinnaker Application
 
 .. note::
     * note
@@ -575,10 +558,11 @@ What are we going to cover today cont.?
 =======================================
 
 * Introductions to Pipelines
-* Baking and Deploying
-* Working with Load Balancers and Health Checks
-* Branching pipelines and Pipelines of pipelines
+* Working with Helm
+* Pipeline Strategies
 * Introduction to Spring Expression Language (SpEL)
+* Deploying Stateful Applications
+* Debugging Pipelines
 
 .. note::
     * note
@@ -600,11 +584,11 @@ Spinnaker - The Fundamentals
 Why Spinnaker was created
 =========================
 
-A brief history of Deployments at Netflix
+* A brief history of Deployments at Netflix
 
-A need for end to end orchestration
+* A need for end to end orchestration
 
-When deploying to the cloud, your development platform should understand the cloud
+*  When deploying to the cloud, your development platform should understand the cloud
 
 .. note::
     * note
@@ -1042,6 +1026,186 @@ Kubernetes Health Checks
 
 ----
 
+:id: pipeline-strategies 
+
+Pipeline Strategies
+===================
+
+.. note::
+    * note
+
+----
+
+:id: promotional-pipelines 
+
+Promotional Pipelines
+=====================
+
+.. note::
+    * note
+
+----
+
+:id: branching-pipelines 
+
+Branching Pipelines
+=====================
+
+.. note::
+    * note
+
+----
+
+:id: halting-pipelines 
+
+Halting Pipelines
+=================
+
+.. note::
+    * note
+
+----
+
+:id: multicluster-pipelines 
+
+Multi-Cluster Pipelines
+=======================
+
+.. note::
+    * note
+
+----
+
+:id: spel-introduction
+
+Spring Expression Language(SpEL) Introduction
+=============================================
+
+.. note::
+    * note
+
+----
+
+:id: about-spel
+
+About SpEL
+==========
+* Add logic to pipelines
+* Used mostly to eval variables
+    * Set vars from build systems
+    * Pass image names between stages
+    * Retrieve and eval manual judge responses
+* Can do much more
+    * Embed java/groovy
+
+.. note::
+    * note
+
+----
+
+:id: spring-expressions
+
+Spring Expressions
+==================
+What does a Spring Expression look like?
+* A shell variable
+Where can I use them?
+* Any place in the UI where you can enter free-form text
+* In the "Edit Pipeline JSON" tool
+When are they evaulated?
+* At stage execution time
+Any exceptions?
+* Yes, can't use during pipeline configuration stage
+
+.. note::
+    * note
+----
+
+:id: expression-tool 
+
+Expression Tools - Helper Functions
+===================================
+
+.. image:: images/expression_tool.png
+    :height: 450px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+----
+
+:id: expression-tool-helper
+
+Expression Tools - Helper Properties
+====================================
+
+.. image:: images/expression_tool_helper.png
+    :height: 450px
+    :width: 1080px
+    :align: center
+
+
+.. note::
+    * note
+
+----
+
+:id: conditional-spel
+
+Conditional SpEL
+================
+
+.. image:: images/conditionally_run.png
+    :height: 450px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: stateful-apps
+
+Deploying Stateful Applications
+===============================
+
+.. note::
+    * note
+
+----
+
+:id: debugging-pipelines
+
+Debugging Pipelines
+===================
+
+.. note::
+    * note
+
+----
+
+:id: debugging-bakes
+
+Debugging Bakes
+===============
+
+.. note::
+    * note
+
+----
+
+:id: debugging-deployments
+
+Debugging Deployments
+=====================
+
+.. note::
+    * note
+
+----
+
 
 :id: questions
 
@@ -1053,3 +1217,25 @@ Presentation available at: https://github.com/mcgonagle/103
 .. note::
 
     * note
+
+----
+
+:id: thank-you
+
+Thank You Very Much
+===================
+Thomas A. McGonagle
+-------------------
+Solutions Architect
+-------------------
+thomas.mcgonagle@armory.io
+--------------------------
+@mcgonagle
+----------
+
+.. image:: images/thomas_mcgonagle.png
+    :height: 400px
+    :width: 500px
+
+.. note::
+  * note

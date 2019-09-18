@@ -438,115 +438,499 @@ brew install
 
 ----
 
-:id: rst
+----
 
-reStructured Text
+:id: migrating-to-the-cloud
+
+Migrating to the Cloud
+======================
+
+.. image:: images/migrating_to_the_cloud.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: rigid-tooling
+
+Rigid and Intertwined Tooling
+=============================
+
+.. image:: images/rigid_tooling.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: unified-approach
+
+A Unified Approach to Migrating
+===============================
+
+.. image:: images/unified_approach.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: deploy-dependencies
+
+Deploy without Dependencies
+===========================
+
+.. image:: images/deploy_dependencies.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: single-pane-glass
+
+Spinnaker is a Single Pane of Glass
+===================================
+
+.. image:: images/single_pane_glass.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: open-source
+
+Spinnaker: The Open Source Standard 
+===================================
+
+.. image:: images/open_source.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: pluggable
+
+Spinnaker is a Pluggable, Cloud Native Platform 
+===============================================
+
+.. image:: images/pluggable.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+
+:id: before-we-start
+
+Before We Start...
+==================
+
+.. note::
+    * note
+
+----
+
+:id: cover-today
+
+What are we going to cover today?
+=================================
+
+* Intro, Goals, Assumptions
+* Background & Philosophy & Terminology
+* Archtecture 
+* Projects and Application in Spinnaker
+
+.. note::
+    * note
+
+----
+
+:id: cover-today-cont
+
+What are we going to cover today cont.?
+=======================================
+
+* Introductions to Pipelines
+* Baking and Deploying
+* Working with Load Balancers and Health Checks
+* Branching pipelines and Pipelines of pipelines
+* Introduction to Spring Expression Language (SpEL)
+
+.. note::
+    * note
+
+----
+
+:id: spinnaker-fundamentals
+
+Spinnaker - The Fundamentals
+============================
+
+.. note::
+    * note
+
+----
+
+:id: why-spinnaker
+
+Why Spinnaker was created
+=========================
+
+A brief history of Deployments at Netflix
+
+A need for end to end orchestration
+
+When deploying to the cloud, your development platform should understand the cloud
+
+.. note::
+    * note
+
+----
+
+:id: spinnaker-philosophy
+
+Spinnaker Philosophy
+====================
+
+* Make all of your infrastructure immutable
+* Make the deployment tool aware of infrastructure
+* Minimize the possibility of errors in deployments
+* Make deployments easy and repeatable
+* When deployments fail, make it easy to roll back 
+* Make it possible to deploy where you want, when you want 
+
+.. note::
+    * note
+
+----
+
+:id: armory-adds
+
+What Armory Adds
+================
+
+* Observability through the collection, correlation and presentation of data and metrics
+* Enterprise class OSS software integration
+* Pipeline as Code
+* *Your* line into ongoing OSS development
+* Experience running Spinnaker at scale
+
+.. note::
+    * note
+
+----
+
+:id: terminology
+
+Terminology
+===========
+
+* CI - Continuous Integration
+* CD - Continous Delivery
+* Continuous Deployment
+* Pipeline - all stages of the SDLC
+* ServerGroup - Spinnaker term for ASG/ReplicaSet
+* Application - Collection of Related Apps
+* Project - Collection of related Applications
+* Stack - Anything that you want to be integrated together, i.e. environments
+
+.. note::
+    * note
+
+----
+
+:id: spinnaker-architecture
+
+Spinnaker Architecture
+======================
+
+* 10 micro services
+* Written in SpringBoot (Deck is Angular 1/ReactJS)
+* Redis/SQL/(Cassandra)
+* S3/GCS
+* Kubernetes/AWS/GCP
+
+.. note::
+    * note
+
+----
+
+:id: spinnaker-diagram
+
+Spinnaker Architecture
+======================
+
+.. image:: images/spinnaker_architecture.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: projects-applications
+
+Projects & Applications
+=======================
+
+.. note::
+    * note
+
+----
+
+:id: projects
+
+Projects
+========
+
+What is a Project?
+- A Collection of Applications
+
+Think of this as your Product
+
+
+.. note::
+    * note
+
+----
+
+:id: applications
+
+Applications
+============
+
+Applications are deployable artifacts
+
+Applications map to a single repo
+
+
+.. note::
+    * note
+
+----
+
+:id: exercise-1
+
+Exercise 1
+============
+
+Create a project and an application
+ - Project name should be ${username}Project1
+ - Applications should be named ${username}UI
+ - Applications must include the cloud providers
+   - kubernetes
+   - AWS
+ - Leave the “Repo Type” BLANK
+ - Check -> Instance Health: Consider only cloud provider health...
+ - Add your application to the project
+
+.. note::
+    * note
+
+----
+
+:id: introduction-to-pipelines
+
+Introduction to Pipelines
+=========================
+
+.. note::
+    * note
+
+----
+
+
+:id: creating-a-pipeline   
+
+Creating a Pipeline
+===================
+
+Pipeline names are freeform
+
+.. note::
+    * note
+
+----
+
+:id: pipeline-configuration
+
+Pipeline Configuration
+======================
+
+.. note::
+    * note
+
+
+----
+
+:id: pipeline-triggers
+
+Pipeline Triggers
 =================
 
-.. image:: https://i1.wp.com/itsfoss.com/wp-content/uploads/2018/06/formiko-editor-800x449.jpeg?resize=800%2C449&ssl=1
-    :height: 600px
-    :width: 600px
-    :align: center 
-    :target: http://docutils.sourceforge.net/rst.html
-
-
-
-
-.. note::
-
-    * not
-
-----
-
-:id: headers
-
-Headers
-=======
-
-.. code:: python
-    
-    This becomes a h1
-    =================
-
-    And this a h2
-    -------------
+Triggers tell Spinnaker when to start a pipeline
+* Code Commits
+* CI Builds
+* New package or container versions
+* WebHooks
+* Scheduled
+* Other Pipelines
 
 .. note::
-
     * note
 
 ----
 
-:id: bullets
+:id: git-trigger
 
-bullets
-=======
+The Git Trigger
+===============
 
-.. code:: python
-
-    * Bullet 1
-
-        * Bullet 1.1
-
-    * Bullet 2
-
-    * Bullet 3
+It's just a webhook!
+But its a special webhook.
 
 .. note::
-
     * note
 
 ----
 
-:id: lists
+:id: stages-overview
 
-lists
-=======
+Stages Overview
+===============
 
-.. code:: python
+Stages are automated steps of your SDLC
+* Software builds in your CI tool
+* Automated tests
+* Manual tests or judgments
+* Deployments
+* Scaling activities
+* Baking (creating) a new image
+* Evaulations
+* Wait stage
+* Much more...
 
-    1. Item 1
-
-        1.1. Item 1.1
-
-    2. Item 2
-
-    3. Item 3
 
 .. note::
-
     * note
 
 ----
 
-:id: images
+:id: wait-stage
 
-images
-======
+Wait Stage
+==========
 
-.. code:: python
-
-    .. image:: path/to/image.png
-        :height: 600px
-        :width: 800px
+Introduces an arbitrary wait
+Why might we want this?
 
 .. note::
+    * note
 
+
+----
+
+:id: manual-judgement-stage
+
+Manual Judgment Stage
+=====================
+
+Use a Manual Judgment as a human gate to your next stage
+
+.. note::
+    * note
+
+
+----
+
+:id: execution-options
+
+Execution Options
+=================
+
+These are common to all stages
+
+.. note::
     * note
 
 ----
 
-:id: css
+:id: executing-a-pipeline
 
-css
-===
+Executing a Pipeline
+====================
 
-https://github.com/mcgonagle/sharkhack/blob/master/presentation/presentation.css
 
 .. note::
-
     * note
 
+
+----
+
+:id: demo-working-github
+
+Demo - Working with the GitHub UI
+=================================
+
+
+.. note::
+    * note
+
+----
+
+:id: exercise-2
+
+Exercise 2
+==========
+
+1. Clone the GitHub repo https://github.com/armory-training/spintroui
+
+2. Create and push a new branch to the repo called “dev-${username}”
+
+3. Create a pipeline in your ${username}UI application
+    - Pipeline should be called “Bake and Deploy”
+    - Add a GitHub trigger for your branch of the spintroui repo
+    - Add a Wait stage to your pipeline
+
+ 4. 	Add a Manual Judgement stage to your pipeline
+    - Provide the user with a custom prompt
+
+Update the Readme with your username in your branch and git push; 
+Don’t forget to click Save!
+
+
+
+
+.. note::
+    * note
 
 ----
 

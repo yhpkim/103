@@ -384,7 +384,7 @@ brew install
 :id: docker
 
 Exercise 1 - docker
-======
+===================
 
 Make a Change and then....
 
@@ -412,7 +412,7 @@ Make a Change and then....
 :id: k8s
 
 Exercise 1 - k8s
-===
+================
 
 .. code:: python
 
@@ -431,7 +431,7 @@ Exercise 1 - k8s
 :id: helm 
 
 Exercise 1 - helm
-====
+=================
 
 .. code:: python
 

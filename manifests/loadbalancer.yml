@@ -5,6 +5,7 @@ metadata:
   labels:
     run: "103"
   name: hundredthree-0
+  namespace: mcgonagle
 spec:
   ports:
   - port: 9000

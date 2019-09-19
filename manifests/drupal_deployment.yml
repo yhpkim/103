@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: "drupal"
+  name: "drupal"
+  namespace: mcgonagle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: "drupal"
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: "drupal"
+    spec:
+      containers:
+      - image: drupal
+        name: "drupal"
+        resources: {}
+status: {}

@@ -5,6 +5,7 @@ metadata:
   labels:
     run: "103"
   name: "103"
+  namespace: mcgonagle
 spec:
   replicas: 1
   selector:

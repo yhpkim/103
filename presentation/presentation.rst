@@ -31,7 +31,7 @@ Spinnaker & K8S
 
 .. note::
 
-  * note
+  * This is a test note. 
 
 
 ----

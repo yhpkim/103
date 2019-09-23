@@ -1,32 +1,32 @@
-# The very first step is to create a new namespace in each of our three clusters ps-dev, ps-prod, ps-prod2. We are going to use a spinnaker pipeline to do this. 
+# The very first step is to create a new namespace in each of our three clusters ps-dev, ps-prod, ps-prod2. 
+
+#We are going to use a spinnaker pipeline to do this. 
 
 1.	Login to training.armory.io
 2.	Configure an Application
- 
-
-2.	Click on Pipelines
-3.	Click on Configure a new pipeline
-4.	Name pipeline “deploy mcgonagle namespace in each cluster”
-5.	Add a Deploy (Manifest) Stage
-6.	Change Name to Deploy mcgonagle in namespace dev
-7.	Account: eks-ps-dev
-8.	Manifest Source → text
-9.	Copy Deployment Manifest into TextBox
-https://raw.githubusercontent.com/mcgonagle/103/master/manifests/namespace.yml
-10.	Click Save Changes at Bottom Right Screen
-11.	Add a Deploy (Manifest) Stage
-12.	Change Name to Deploy mcgonagle in namespace prod
-13.	Account: eks-ps-prod
-14.	Manifest Source → text
-15.	Copy Deployment Manifest into TextBox
-https://raw.githubusercontent.com/mcgonagle/103/master/manifests/namespace.yml
-16.	Click Save Changes at Bottom Right Screen
-17.	Add a Deploy (Manifest) Stage
-18.	Change Name to Deploy mcgonagle in namespace prod2
-19.	Account: eks-ps-prod2
-20.	Manifest Source → text
-21.	Copy Deployment Manifest into TextBox
-https://raw.githubusercontent.com/mcgonagle/103/master/manifests/namespace.yml
-22.	Click Save Changes at Bottom Right Screen
-23.	Click Pipelines at top of screen 
-24.	Run pipeline with a start manual execution
+3.	Click on Pipelines
+4.	Click on Configure a new pipeline
+5.	Name pipeline “deploy mcgonagle namespace in each cluster”
+6.	Add a Deploy (Manifest) Stage
+7.	Change Name to Deploy mcgonagle in namespace dev
+8.	Account: eks-ps-dev
+9.	Manifest Source → text
+10.	Copy Deployment Manifest into TextBox
+`https://raw.githubusercontent.com/mcgonagle/103/master/manifests/namespace.yml`
+11.	Click Save Changes at Bottom Right Screen
+12.	Add a Deploy (Manifest) Stage
+13.	Change Name to Deploy mcgonagle in namespace prod
+14.	Account: eks-ps-prod
+15.	Manifest Source → text
+16.	Copy Deployment Manifest into TextBox
+`https://raw.githubusercontent.com/mcgonagle/103/master/manifests/namespace.yml`
+17.	Click Save Changes at Bottom Right Screen
+18.	Add a Deploy (Manifest) Stage
+19.	Change Name to Deploy mcgonagle in namespace prod2
+20.	Account: eks-ps-prod2
+21.	Manifest Source → text
+22.	Copy Deployment Manifest into TextBox
+`https://raw.githubusercontent.com/mcgonagle/103/master/manifests/namespace.yml`
+23.	Click Save Changes at Bottom Right Screen
+24.	Click Pipelines at top of screen 
+25.	Run pipeline with a start manual execution

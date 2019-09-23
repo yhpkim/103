@@ -1,6 +1,6 @@
 # The very first step is to create a new namespace in each of our three clusters ps-dev, ps-prod, ps-prod2. 
 
-#We are going to use a spinnaker pipeline to do this. 
+# We are going to use a spinnaker pipeline to do this. 
 
 1.	Login to training.armory.io
 2.	Configure an Application

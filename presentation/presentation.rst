@@ -662,9 +662,9 @@ Namespace
 
 ----
 
-:id: k8s
+:id: K8s
 
-Exercise 1 - k8s
+Exercise 2 - K8s
 ================
 
 .. code:: python
@@ -674,6 +674,44 @@ Exercise 1 - k8s
     kubectl -n default expose deployment/103 --port=9000 --target-port=9000
 
     kubectl -n default port-forward services/103 9000:9000
+
+.. note::
+    * note
+
+----
+
+:id: K8s-manifests
+
+Kubernetes Manifests
+====================
+
+.. note::
+    * note
+
+----
+
+:id: K8s-namespace-manifest
+
+Kubernetes Namespace Manifest
+=============================
+
+.. note::
+    * note
+
+----
+
+:id: K8s-deployment-manifest
+
+Kubernetes Deployment Manifest
+=============================
+
+.. note::
+    * note
+
+:id: K8s-loadbalancer-manifest
+
+Kubernetes Loadbalancer Manifest
+================================
 
 .. note::
     * note

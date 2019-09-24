@@ -377,6 +377,93 @@ brew install
 
 ----
 
+:id: what-is-docker
+
+What is Docker?
+===============
+
+* Ligthweight, open, secure platform
+* Simplify building, shipping, and running apps
+* Runs natively on Linux, Mac or Windows Server
+* Relies on "images" and "containers"
+
+.. note::
+    * note
+
+----
+
+:id: what-is-a-container
+
+What is a container?
+====================
+
+.. image:: images/docker/what_is_a_container.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: docker-vs-vms
+
+Docker vs. Virtual Machines
+===========================
+
+.. image:: images/docker/docker_vs_vms.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: build-ship-run
+
+Build, Ship, and Run
+====================
+
+.. image:: images/docker/build_ship_run.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: docker
+
+Exercise 1 - docker
+===================
+
+Make a Change and then....
+
+.. code:: python
+
+    git clone git@github.com:mcgonagle/103.git
+
+    docker build --tag=mcgonagle/103 . 
+    
+    docker run -it --rm -p "9000:9000" mcgonagle/103
+
+    docker login
+
+    docker build --tag=mcgonagle/103 .
+
+    docker push mcgonagle/103:latest
+
+
+.. note::
+    * note
+
+----
+
 
 :id: where-we-have-between
 
@@ -559,33 +646,6 @@ Namespace
 
 ----
 
-:id: docker
-
-Exercise 1 - docker
-===================
-
-Make a Change and then....
-
-.. code:: python
-
-    git clone git@github.com:mcgonagle/103.git
-
-    docker build --tag=mcgonagle/103 . 
-    
-    docker run -it --rm -p "9000:9000" mcgonagle/103
-
-    docker login
-
-    docker build --tag=mcgonagle/103 .
-
-    docker push mcgonagle/103:latest
-
-
-.. note::
-    * note
-
-----
-
 :id: k8s
 
 Exercise 1 - k8s
@@ -618,6 +678,17 @@ Exercise 1 - helm
     helm install --dry-run --debug ./103
 
     helm delete --purge 103
+
+
+.. note::
+    * note
+
+----
+
+:id: spinnaker-overview
+
+Spinnaker Overview
+==================
 
 
 .. note::

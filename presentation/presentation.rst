@@ -695,6 +695,14 @@ Kubernetes Manifests
 Kubernetes Namespace Manifest
 =============================
 
+.. code:: python
+
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: mcgonagle  
+
+
 .. note::
     * note
 
@@ -703,15 +711,96 @@ Kubernetes Namespace Manifest
 :id: K8s-deployment-manifest
 
 Kubernetes Deployment Manifest
-=============================
+==============================
+
+.. code:: python
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: "103"
+      name: "103"
+      namespace: mcgonagle
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+        run: "103"
+    strategy: {}
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          run: "103"
+    spec:
+      containers:
+      - image: mcgonagle/103
+        name: "103"
+        resources: {}
+    status: {}
+
 
 .. note::
     * note
+
+----
+
+:id: K8s-service-manifest
+
+Kubernetes Service Manifest
+===========================
+
+.. code:: python
+
+    apiVersion: v1
+    kind: Service
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: "103"
+      name: "103"
+    spec:
+      ports:
+      - port: 9000
+        protocol: TCP
+        targetPort: 9000
+    selector:
+      run: "103"
+    status:
+      loadBalancer: {}
+
+.. note::
+    * note
+
+----
 
 :id: K8s-loadbalancer-manifest
 
 Kubernetes Loadbalancer Manifest
 ================================
+
+.. code:: python
+
+    apiVersion: v1
+    kind: Service
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: "103"
+      name: hundredthree-0
+      namespace: mcgonagle
+    spec:
+      ports:
+      - port: 9000
+        protocol: TCP
+        targetPort: 9000
+      selector:
+        run: "103"
+      type: LoadBalancer
+    status:
+      loadBalancer: {}
 
 .. note::
     * note

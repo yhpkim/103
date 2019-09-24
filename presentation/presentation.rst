@@ -206,6 +206,21 @@ DevOps Practices
 
 ----
 
+:id: ci-cd
+
+CI/CD
+=====
+
+.. image:: https://www.talend.com/wp-content/uploads/DevOps-Talend-1.png
+    :height: 600px
+    :width: 1200px
+    :align: center
+
+.. note::
+    * note
+
+----
+
 :id: continuous-improvement 
 
 Continuous Improvement
@@ -260,21 +275,6 @@ Dog Food
 .. image:: https://images-na.ssl-images-amazon.com/images/I/81XPwF8NnAL._SL1500_.jpg
     :height: 600px
     :width: 800px
-    :align: center
-
-.. note::
-    * note
-
-----
-
-:id: ci-cd
-
-CI/CD
-=====
-
-.. image:: https://www.talend.com/wp-content/uploads/DevOps-Talend-1.png
-    :height: 600px
-    :width: 1200px
     :align: center
 
 .. note::
@@ -367,10 +367,26 @@ brew install
 
 .. code:: python
 
+   brew install git
 
    brew install kubernetes-helm
 
    brew install kubectx
+
+.. note::
+    * note
+
+----
+
+:id: docker-transition
+
+Docker
+======
+
+.. image:: images/docker/docker.png
+    :height: 640px
+    :width: 1080px
+    :align: center
 
 .. note::
     * note

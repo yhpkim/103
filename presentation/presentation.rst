@@ -1,6 +1,6 @@
-:title: Spinnaker & K8S
+:title: Spinnaker & K8s
 :author: Thomas A. McGonagle
-:keywords: Spinnaker, K8S, kubernetes, helm
+:keywords: Spinnaker, k8s, kubernetes, helm
 :skip-help: true
 :css: presentation.css
 
@@ -24,7 +24,7 @@
 
 :id: title-slide
 
-Spinnaker & K8S
+Spinnaker & K8s
 ===============
 9/23/19 - 9/26/19
 -----------------
@@ -43,7 +43,8 @@ Agenda
 
 * Intro, Goals, Assumptions
 * Background & Philosophy & Terminology
-* Spinnaker Archtecture 
+* Docker and Kubernetes Overview
+* Spinnaker Archtecture Overview
 * Creating a Spinnaker Application
 
 .. note::
@@ -78,8 +79,8 @@ Solutions Architect
 -------------------
 thomas.mcgonagle@armory.io
 --------------------------
-@mcgonagle
-----------
+https://go.armory.io/thomas
+---------------------------
 
 .. image:: images/thomas_mcgonagle.png
     :height: 400px
@@ -126,7 +127,7 @@ Spinnaker Metaphor
 Training Goals
 ==============
 
-* Grok Spinnaker & k8s
+* Grok Spinnaker & K8s
 
 * ??
 
@@ -205,22 +206,6 @@ DevOps Practices
 
 ----
 
-:id: hovercaft
-
-hovercraft
-==========
-
-.. image:: https://www.hoverstream.com/wp-content/uploads/2016/01/Marlin-II_Main.png
-    :height: 600px
-    :width: 600px
-    :align: center 
-    :target: https://hovercraft.readthedocs.io/en/latest/index.html
-
-.. note::
-    * note
-
-----
-
 :id: continuous-improvement 
 
 Continuous Improvement
@@ -245,6 +230,22 @@ Three Ways
     :height: 600px
     :width: 1200px
     :align: center
+
+.. note::
+    * note
+
+----
+
+:id: hovercaft
+
+hovercraft
+==========
+
+.. image:: https://www.hoverstream.com/wp-content/uploads/2016/01/Marlin-II_Main.png
+    :height: 600px
+    :width: 600px
+    :align: center 
+    :target: https://hovercraft.readthedocs.io/en/latest/index.html
 
 .. note::
     * note
@@ -376,6 +377,187 @@ brew install
 
 ----
 
+
+:id: where-we-have-between
+
+Where we've been 
+================
+
+.. image:: images/docker/simple_container.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: where-we-are-today
+
+Where we are today
+==================
+
+.. image:: images/docker/cluster_containers.png
+    :height: 640px
+    :width: 1080px
+    :align: center
+
+.. note::
+    * note
+
+----
+
+:id: container-challenges
+
+Challenges
+==========
+
+* Scheduling containers across nodes
+* Monitoring containers and workloads
+* Scaling containers to rightsize for workloads
+* Container communication and networking
+* Service discovery and load balancing
+* Storage management and orchestration
+* Application deployments and rollbacks
+* Secret and configuration management
+* Scaling infrastructure and worker nodes
+
+.. note::
+    * note
+
+----
+
+:id: what-is-kubernetes
+
+What is Kubernetes?
+===================
+
+* Container orchestration system originally crated by Google for managing containerized workloads and services
+* Based off of Google's proprietary Borg system which manages **2 billion containers per week**
+* Currently the **fastest** growing open source project on the planet
+* De facto cloud native operating system supported by all major cloud providers
+
+.. note::
+    * note
+
+----
+
+
+:id: what-does-kubernetes-do
+
+What does Kubernetes do?
+========================
+
+* Schedules containers across nodes and ensures containers are utilizing the underlying hardware 
+* Provides a platform for contianer communication and networking across cluster_containers
+* Service discovery and load balancing within a cluster
+* Storage management and orchestration across nodes and cloud storage providers
+* Application deployments and rollbacks
+* Secret and configuration management
+* Monitors container worklooads and restarts applications
+
+.. note::
+    * note
+
+----
+
+:id: five-core-kubernetes
+
+5 Core Kubernetes Essential Concepts
+====================================
+
+* Pod 
+* Deployment
+* Service
+* Ingress
+* Namespace
+
+.. note::
+    * note
+
+----
+
+:id: pod
+
+Pod
+===
+
+* The basic deployable unit in Kubernetes
+* 1+ (but tends to be just one) co-located and co-scheduled containers
+* All containers in a pod share network and storage
+* Can communicate over **localhost**
+* Represents a single instance of an application
+* Think of a pod as a **logical host** for an applciation's components
+
+.. note::
+    * note
+
+----
+
+:id: deployment
+
+Deployment
+==========
+
+* Allows you to manage pods in a declarative and upgradeable mannaer
+* Note the "replicas" field that allows for scaling the number of pods
+* Provide the ability to rollout changes and roll them back if necessary
+* Different deployment strategies can be used
+
+.. note::
+    * note
+
+----
+
+:id: service
+
+Service
+=======
+
+* Exposes one or many Pods via an internal IP address
+* Also accessbile via cluster naming
+
+    **{service}.{namespace}.svc.cluster.local**
+
+    **nginx.webservice.svc.cluster.local**
+* Service selects pods based on labels (in this case app=nginx)
+* A Service mayb expose multiple ports
+
+.. note::
+    * note
+
+----
+
+:id: ingress
+
+Ingress
+=======
+
+* A Service is only accessible inside of the cluster
+* An Ingress controller is used to expose a Service to the external world 
+* Ingress maps hostnames and paths to internal services (think reverse proxy)
+* The Ingress contoller is a loadbalancer that is forward requests based on rules
+
+.. note::
+    * note
+
+----
+
+:id: namespace
+
+Namespace
+=========
+
+* A Namespace is a logical isolation method
+* Group logically similar workloads in a single namespace and enforce policies. For instance you can have one namespace per team
+* Role Based Access Control (RBAC) can be used to control what users can do within a namespace
+* You can limit the amount of cluster resources a namespace can use
+
+.. note::
+    * note
+
+----
 
 :id: docker
 

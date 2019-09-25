@@ -669,16 +669,31 @@ Exercise 2 - K8s
 
 .. code:: python
 
-    kubectl -n default run 103 --image=mcgonagle/sharkhack 
+    kubectl -n default run hundredthree --image=mcgonagle/103
 
-    kubectl -n default expose deployment/103 --port=9000 --target-port=9000
+    kubectl -n default expose deployment/hundredthree --port=9000 --target-port=9000
 
-    kubectl -n default port-forward services/103 9000:9000
+    kubectl -n default port-forward services/hundredthree 9000:9000
 
 .. note::
     * note
 
 ----
+
+Exercise 2 cont. - K8s
+======================
+
+.. code:: python
+
+    kubectl -n default delete service hundredthree
+
+    kubectl -n default delete deployment hundredthree
+
+
+.. note::
+    * note
+
+---
 
 :id: K8s-manifests
 
@@ -807,20 +822,132 @@ Kubernetes Loadbalancer Manifest
 
 ----
 
-:id: helm 
+:id: manifest-exercises
 
-Exercise 1 - helm
+Exercise 3 - manifests
+======================
+
+.. code:: python
+
+    git clone https://github.com/mcgonagle/103.git
+    cd 103/manifests
+    edit manifests namespaces.yml, deployment.yml and loadbalancer.yml 
+    edit the namespace to reflect your last name
+
+.. note::
+    * note
+
+----
+
+
+Exercise 3 cont. - manifests
+============================
+
+.. code:: python
+
+    kubectl get ns --all-namespaces
+    kubectl create -f namespace.yml
+    kubectl get ns --all-namespaces
+
+.. note::
+    * note
+
+----
+
+Exercise 3 cont. - manifests
+============================
+
+.. code:: python
+
+    kubectl get deployment -n mcgonagle
+    kubectl get pods -n mcgonagle
+    kubectl create -f deployment.yml
+    kubectl get deployment -n mcgonagle
+    kubectl get pods -n mcgonagle
+
+
+.. note::
+    * note
+
+----
+
+Exercise 3 cont. - manifests
+============================
+
+.. code:: python
+
+    kubectl get services -n mcgonagle
+    kubectl create -f loadbalancer.yml
+    kubectl get services -n mcgonagle
+
+.. note::
+    * note
+
+----
+
+Exercise 3 cont. - manifests
+============================
+
+.. code:: python
+
+    kubectl delete service hundredthree-0 -n mcgonagle
+    kubectl delete deployment 103 -n mcgonagle
+
+.. note::
+    * note
+
+----
+
+:id: helm-overview
+
+Helm Overview
+=============
+
+.. note::
+    * note
+
+
+----
+
+:id: what-is-helm
+
+What is Helm?
+=============
+
+Helm is a package manager for K8s
+---------------------------------
+
+* Makes applications deployment easy, standardized and reusable
+* Improves developer productivity
+* Reduces deployment complexity
+* Enhances operational readiness
+* Speeds up adoption of cloud native apps
+
+.. note::
+    * note
+
+----
+
+:id: helm-exercises
+
+Exercise 3 - helm
 =================
 
 .. code:: python
 
+    kubectl -n kube-system create serviceaccount tiller
+
     helm init --service-account tiller --history-max 200 --upgrade
 
-    helm create 103
+    cd helm
 
-    helm install --dry-run --debug ./103
+    helm install --dry-run --debug hundredthree
 
-    helm delete --purge 103
+    helm install --debug hundredthree
+
+    helm list
+
+    helm delete --purge doltish-condor
 
 
 .. note::

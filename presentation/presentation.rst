@@ -1423,7 +1423,11 @@ Stages are automated steps of your SDLC
 
 
 .. note::
-    * note
+    * This is a talk slide, explain SOME of the possible stages, but not all (there’s too many options).
+    * Stage is a logical orchestrated step in a pipeline, it does one thing.
+    * That one thing can be comprised of multiple actions, in other words small tasks.
+    * Touch on the differences in things like Deploy stage (aws vs k8s)
+ 
 
 ----
 
@@ -1441,7 +1445,13 @@ Why might we want this?
     :align: center
 
 .. note::
-    * note
+    * Demo Slide
+    * Wait for an application to warm up
+    * Place holder in development for testing
+    * Wait for something you don’t have a status on
+    * To clean up branched pipeline visualization
+    * Need to include specific use cases for the Wait stage here.
+
 
 
 ----
@@ -1461,7 +1471,10 @@ Use a Manual Judgment as a human gate to your next stage
 
 
 .. note::
-    * note
+    * Demo slide
+    * Need to include specific use cases for the Manual Judgement stage here.
+    * This is how you can get human approval for a deployment to proceed.
+ 
 
 
 ----
@@ -1479,7 +1492,9 @@ These are common to all stages
     :align: center
 
 .. note::
-    * note
+    * Demo Slide
+    * Need to include specific use cases for the different options.
+
 
 ----
 
@@ -1494,7 +1509,8 @@ Executing a Pipeline
     :align: center
 
 .. note::
-    * note
+    * Demo Slide
+    * Talk about using the Git Trigger
 
 
 ----
@@ -1510,7 +1526,9 @@ Demo - Working with the GitHub UI
     :align: center
 
 .. note::
-    * note
+    * Demo Slide
+    * Walk through creating a branch, then updating/editing the README file from the UI
+
 
 ----
 

@@ -31,7 +31,7 @@ Spinnaker & K8s
 
 .. note::
 
-  * This is a test note. 
+  * Introductory Slide.
 
 
 ----
@@ -48,7 +48,7 @@ Agenda
 * Creating a Spinnaker Application
 
 .. note::
-    * note
+    * Agenda overview for training.
 
 ----
 
@@ -65,7 +65,7 @@ Agenda cont.
 * Debugging Pipelines
 
 .. note::
-    * note
+    * Agenda overview continued for training. 
 
 ----
 
@@ -87,7 +87,7 @@ https://go.armory.io/thomas
     :width: 500px
 
 .. note::
-  * note
+  * Introduction to the instructor. 
 
 ----
 
@@ -104,7 +104,7 @@ Introductions
 
 .. note::
 
-  * note
+  * Class room introductions and an icebreaker. 
 
 ----
 
@@ -118,7 +118,10 @@ Spinnaker Metaphor
     :width: 400px
 
 .. note::
-  * note
+  * A spinnaker is a parachute used in sailing which catches the wind and allows a sail boat to travel faster. 
+    This is the metaphor for Spinnaker the CD tool. It is an extra sail that allows your cloud deployments to go 
+    faster. There is a famous spinnaker scene in the awesomely terrible waterworld movie where the protagonist
+    shoots a spinnaker out of his boat to escape the smokers. 
 
 ----
 
@@ -138,7 +141,8 @@ Training Goals
 
 .. note::
 
-  * note
+  * The goal of the training is for the student to develop a better general overall understanding of Spinnaker
+    specifically and continuos delivery in general.
 
 ----
 
@@ -157,6 +161,12 @@ Training Philosophy
     :width: 250px
     :align: right
 
+.. note::
+  * My grandfather was a high school history teacher for 35 years. He always said that the best teaching
+    he ever experienced was in the army. Where they TELL you what they are going to teach you, TEACH it, and the
+    TEST you on it. 
+    In addition, the class is meant to be interactive and conversational. Similar to the socratic method.
+    
 ----
 
 :id: learning-fun 
@@ -169,7 +179,7 @@ Fun Learning Strategies
     :width: 800px
 
 .. note::
-  * note
+  * The class is meant to be friendly to all sorts of learning styles and for it to be fun!
 
 ----
 
@@ -186,7 +196,7 @@ DevOps Tenants - ACAMS+
 * Plus...
 
 .. note::
-    * note
+    * The tenants of DevOps a dicussion on each tenant. 
 
 ----
 
@@ -202,7 +212,7 @@ DevOps Practices
     :target: https://www.dropbox.com/s/wj2jzq66oih030q/enterprise-devops-playbook.pdf?dl=0
 
 .. note::
-    * note
+    * A discussion of the 7 practices of DevOps and the excellent book Enterprise DevOps Playbook. 
 
 ----
 
@@ -217,7 +227,7 @@ CI/CD
     :align: center
 
 .. note::
-    * note
+    * A discussion of continuous integration and delivery.
 
 ----
 
@@ -232,7 +242,10 @@ Continuous Improvement
     :align: center
 
 .. note::
-    * note
+    * This presentation was created through the principles of continuous improvement. What made it possible?
+      This presentation is a software project. Changes made to this presenation are pushed to GitHub, which
+      then kicks off a docker build, which subsequently kicks off a pipeline in Spinnaker. This mimics the process
+      at netflix and other big companies where they make hundreds if not thousands of deployments a day. 
 
 ----
 

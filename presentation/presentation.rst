@@ -166,7 +166,7 @@ Training Philosophy
     he ever experienced was in the army. Where they TELL you what they are going to teach you, TEACH it, and the
     TEST you on it. 
     In addition, the class is meant to be interactive and conversational. Similar to the socratic method.
-    
+
 ----
 
 :id: learning-fun 
@@ -260,7 +260,9 @@ Three Ways
     :align: center
 
 .. note::
-    * note
+    * The third way of DevOps is "continued experimentation" in order to learn from mistakes and achieve mastery. 
+        This is the goal of DevOps mastery. Mastery of the people, processes and tools in your environment. 
+        Mastery is only possible through experimentation and trying new things. 
 
 ----
 
@@ -276,7 +278,10 @@ hovercraft
     :target: https://hovercraft.readthedocs.io/en/latest/index.html
 
 .. note::
-    * note
+    * Hovercraft is a python based presentation tool we use to craft our presentations. It relies on restructured text
+        documents that are rendered into an HTML presetnation. We manage our presentation proejects with software development
+        tools such as GitHub and Spinnaker, because our presentations are software. Managing it in this way allows us to use
+        continuous experimentation, continuous improvement and continuous delivery. 
 
 ----
 
@@ -291,7 +296,9 @@ Dog Food
     :align: center
 
 .. note::
-    * note
+    * Dog Food is an old MicroSoft expression that means using your software to create your software. Essentially
+        eating your own dog food. We are dog fooding our presentation software by having it enabled in a CI/CD pipeline to deliver. 
+
 
 ----
 
@@ -305,7 +312,9 @@ Play your Computer Like an Instrument
     :width: 600px
 
 .. note::
-  * note
+  * At Armory we believe that as professionals we should be using our computers as if they were a musical instrument. And that we should be
+    "making music" with our computers. I personally love this metaphor and want to communicate the workflows that I find most powerful and want
+    to level up our 
 
 ----
 
@@ -321,7 +330,8 @@ Docker Desktop
     :target: https://www.docker.com/products/docker-desktop
 
 .. note::
-    * note
+    * Docker produces a very good Docker development environment for macs and windows servers called Docker Desktop. Download it to build and manage a
+        docker container. 
 
 ----
 
@@ -337,7 +347,8 @@ GitHub Desktop
     :target: https://desktop.github.com/ 
 
 .. note::
-    * note
+    * Git is a revolutionary version control system. GitHub makes social coding possible. The GitHub desktop tool clarifies much of the GitHub workflow and 
+      and it is a suggested tool in your tool box. 
 
 ----
 
@@ -353,7 +364,7 @@ Visual Studio Code
     :target: https://code.visualstudio.com/
 
 .. note::
-    * note
+    * Visual Studio Code, available for Windows and Mac is a great Integrated Development Environment, supporting many differnt languages and plugins. 
 
 ----
 
@@ -369,7 +380,7 @@ Home Brew
     :target: https://brew.sh/
 
 .. note::
-    * note
+    * Homebrew is the package manager of choice for Mac desktops. Its the source of many command line tools. 
 
 ----
 
@@ -387,7 +398,7 @@ brew install
    brew install kubectx
 
 .. note::
-    * note
+    * Make sure to have git installed, kubernetes-helm and kubectx
 
 ----
 
@@ -402,7 +413,7 @@ Docker
     :align: center
 
 .. note::
-    * note
+    * Docker transition slide
 
 ----
 
@@ -417,7 +428,7 @@ What is Docker?
 * Relies on "images" and "containers"
 
 .. note::
-    * note
+    * Overview of Docker
 
 ----
 
@@ -432,7 +443,7 @@ What is a container?
     :align: center
 
 .. note::
-    * note
+    * Overview of a container
 
 ----
 
@@ -447,7 +458,7 @@ Docker vs. Virtual Machines
     :align: center
 
 .. note::
-    * note
+    * Overview of docker vs. virtual machines, how they are different and how they are similar
 
 ----
 
@@ -462,7 +473,8 @@ Build, Ship, and Run
     :align: center
 
 .. note::
-    * note
+    * With docker, you build a container, and then push it to a registry where it is then available to be run. This process of building, shipping and running
+        is an advanced workflow that cuts out the middlemen and allows developers to push code quickly and efficiently. 
 
 ----
 
@@ -483,13 +495,15 @@ Make a Change and then....
 
     docker login
 
-    docker build --tag=mcgonagle/103 .
-
     docker push mcgonagle/103:latest
+
+    docker run -it --rm -p "9000:9000" mcgonagle/103
 
 
 .. note::
-    * note
+    * docker build, ship, and run workflow. This workflow has the student learning how to build a docker container from a Dockerfile, then shipping it to 
+      their own personal docker hub registry account and then running the docker container. The intent of this exercise is to introduce and walk a student
+      through the build, ship, run workflow of docker and capture learning that this is a new efficent way to build software. 
 
 ----
 
@@ -505,7 +519,7 @@ Where we've been
     :align: center
 
 .. note::
-    * note
+    * We have been in a world where we craft single machines, single virtual machines and are migrating to a world where we have many many containers. 
 
 ----
 
@@ -520,7 +534,7 @@ Where we are today
     :align: center
 
 .. note::
-    * note
+    * A world where we have many many containers. What does this new complexity require? A management system for all of these containers. 
 
 ----
 
@@ -540,7 +554,7 @@ Challenges
 * Scaling infrastructure and worker nodes
 
 .. note::
-    * note
+    * An overview of the challenges of running containers. 
 
 ----
 
@@ -555,7 +569,7 @@ What is Kubernetes?
 * De facto cloud native operating system supported by all major cloud providers
 
 .. note::
-    * note
+    * An overview of how kubernetes solves this many containers problem. 
 
 ----
 
@@ -574,7 +588,7 @@ What does Kubernetes do?
 * Monitors container worklooads and restarts applications
 
 .. note::
-    * note
+    * An overview of what kubernetes does. 
 
 ----
 
@@ -590,7 +604,7 @@ What does Kubernetes do?
 * Namespace
 
 .. note::
-    * note
+    * Five introductory to kubernetes concepts. 
 
 ----
 
@@ -607,7 +621,7 @@ Pod
 * Think of a pod as a **logical host** for an applciation's components
 
 .. note::
-    * note
+    * Overview of a pod.
 
 ----
 
@@ -622,7 +636,7 @@ Deployment
 * Different deployment strategies can be used
 
 .. note::
-    * note
+    * Overview of a pod. 
 
 ----
 
@@ -641,7 +655,7 @@ Service
 * A Service mayb expose multiple ports
 
 .. note::
-    * note
+    * Overview of a service. 
 
 ----
 
@@ -656,7 +670,7 @@ Ingress
 * The Ingress contoller is a loadbalancer that is forward requests based on rules
 
 .. note::
-    * note
+    * Overview of Ingress. 
 
 ----
 
@@ -671,7 +685,7 @@ Namespace
 * You can limit the amount of cluster resources a namespace can use
 
 .. note::
-    * note
+    * Overview of a namespace. 
 
 ----
 
@@ -689,7 +703,9 @@ Exercise 2 - K8s
     kubectl -n default port-forward services/hundredthree 9000:9000
 
 .. note::
-    * note
+    * You have built and shipped the 103 container in the previous exercise, now it is time to deploy it into your k8s single node cluster running inside
+        the docker for desktop app. The above imperative commands push and then expose the 103 service to the local host making the container available 
+        to the end user through kubernetes.
 
 ----
 
@@ -704,9 +720,9 @@ Exercise 2 cont. - K8s
 
 
 .. note::
-    * note
+    * Steps to delete the service and the deployment. 
 
----
+----
 
 :id: K8s-manifests
 
@@ -714,7 +730,7 @@ Kubernetes Manifests
 ====================
 
 .. note::
-    * note
+    * Transition slide for k8s manifests.
 
 ----
 
@@ -732,7 +748,7 @@ Kubernetes Namespace Manifest
 
 
 .. note::
-    * note
+    * Declarative Namespace manifest
 
 ----
 
@@ -771,7 +787,7 @@ Kubernetes Deployment Manifest
 
 
 .. note::
-    * note
+    * Declarative Deployment manifest
 
 ----
 
@@ -800,7 +816,7 @@ Kubernetes Service Manifest
       loadBalancer: {}
 
 .. note::
-    * note
+    * Declarative Service manifest
 
 ----
 
@@ -831,7 +847,7 @@ Kubernetes Loadbalancer Manifest
       loadBalancer: {}
 
 .. note::
-    * note
+    * Declarative Loadbalanancer manifest
 
 ----
 
@@ -848,7 +864,7 @@ Exercise 3 - manifests
     edit the namespace to reflect your last name
 
 .. note::
-    * note
+    * Clone https://github.com/mcgonagle/103.git, edit the namespace.yml, deployment.yml, and loadbalancer.yml files to reflect a namespace for the student.
 
 ----
 
@@ -863,7 +879,8 @@ Exercise 3 cont. - manifests
     kubectl get ns --all-namespaces
 
 .. note::
-    * note
+    * run a get ns to see the namespaces available in the cluster. Then do a declarative create namespace with the manifest namespace.yml and then see what changed.
+
 
 ----
 
@@ -880,7 +897,7 @@ Exercise 3 cont. - manifests
 
 
 .. note::
-    * note
+    * Look at the pods and deployments and then run the manifest and then see what has changed. 
 
 ----
 
@@ -894,7 +911,7 @@ Exercise 3 cont. - manifests
     kubectl get services -n mcgonagle
 
 .. note::
-    * note
+    * Look at the services and then install a LoadBalancer service and then look at what has changed. 
 
 ----
 
@@ -907,7 +924,7 @@ Exercise 3 cont. - manifests
     kubectl delete deployment 103 -n mcgonagle
 
 .. note::
-    * note
+    * Delete the LoadBalancer and the deployment.
 
 ----
 
@@ -917,7 +934,7 @@ Helm Overview
 =============
 
 .. note::
-    * note
+    * transition slide
 
 
 ----
@@ -937,13 +954,13 @@ Helm is a package manager for K8s
 * Speeds up adoption of cloud native apps
 
 .. note::
-    * note
+    * Overview of Helm
 
 ----
 
 :id: helm-exercises
 
-Exercise 3 - helm
+Exercise 4 - helm
 =================
 
 .. code:: python
@@ -964,7 +981,8 @@ Exercise 3 - helm
 
 
 .. note::
-    * note
+    * Helm Exercise that installs the service account for tiller into the docker-for-desktop k8s cluster, then installs tiller, then does a dry-run of an install
+        then installs the hundredthree helm chart, and finally deletes. 
 
 ----
 
@@ -975,7 +993,7 @@ Spinnaker Overview
 
 
 .. note::
-    * note
+    * Transition Slide
 
 ----
 
@@ -990,7 +1008,8 @@ Migrating to the Cloud
     :align: center
 
 .. note::
-    * note
+    * Migration to the cloud is not easy. Especially in a multi-cloud world. AWS for example has hundreds of services. Developers have to contend with 
+      complex tooling, complex processes and complex compliance. Life in multicloud world is not easy. 
 
 ----
 
@@ -1005,7 +1024,7 @@ Rigid and Intertwined Tooling
     :align: center
 
 .. note::
-    * note
+    * To make matters worse the tooling for continuous integration, delivery, and infrastructure is all intertrwined and rigid. 
 
 ----
 
@@ -1020,7 +1039,8 @@ A Unified Approach to Migrating
     :align: center
 
 .. note::
-    * note
+    * Software delivery requires a unified approach to migration. Deep expertise, scalabilty, flexibility, insights and security are all aspects of Spinnaker.
+      Creating a holistic tool set for developers on their multi cloud journey. 
 
 ----
 
@@ -1035,7 +1055,8 @@ Deploy without Dependencies
     :align: center
 
 .. note::
-    * note
+    * The spinnaker tool unwinds deployment dependencies. It provides arbitrage to the various tools in the CI/CD pipeline acting as a man in the middle 
+        providing a holistic one tool to rule them all. 
 
 ----
 
@@ -1050,7 +1071,8 @@ Spinnaker is a Single Pane of Glass
     :align: center
 
 .. note::
-    * note
+    * Similar to its role as an arbitrator of complex tools, Spinnaker is a single pane of glass to observe and manage the visibiltiy, deployment, infrastructure
+      security and compliance and metrics of your software delivery projects. 
 
 ----
 
@@ -1065,7 +1087,8 @@ Spinnaker: The Open Source Standard
     :align: center
 
 .. note::
-    * note
+    * Spinnaker is open source. It has committers from some of the top companies in the world. There are roughly 100 commits a day. Developers of spinnaker 
+        are practicing continous delivery and experimentation. 
 
 ----
 
@@ -1080,7 +1103,8 @@ Spinnaker is a Pluggable, Cloud Native Platform
     :align: center
 
 .. note::
-    * note
+    * Spinnaker is a cloud native app. Frankly, it is the microservice based app I was looking for to learn K8s. I needed something reasonalbly complex to 
+        fully grasp cloud native architectures and k8s and spinnaker is a great app for understanding. 
 
 ----
 
@@ -1089,16 +1113,6 @@ Spinnaker is a Pluggable, Cloud Native Platform
 
 Before We Start...
 ==================
-
-.. note::
-    * note
-
-----
-
-:id: spinnaker-fundamentals
-
-Spinnaker - The Fundamentals
-============================
 
 .. note::
     * note
@@ -1117,7 +1131,17 @@ Why Spinnaker was created
 *  When deploying to the cloud, your development platform should understand the cloud
 
 .. note::
-    * note
+    * Asgard created an intuitive model for EC2 cloud-based applications that has made deployment and ongoing management of AWS resources easy. Everything required to produce a deployment artifact, in this case an AMI, has never been addressed in Asgard. Spinnaker, kicked off to enable end-to-end global Continuous Delivery at Netflix.
+    * What Asgard didn’t have
+    * This is why Spinnaker was built
+    * The goals of this project were to create a Continuous Delivery platform that would:
+        * enable repeatable automated deployments captured as flexible pipelines and configurable pipeline stages
+        * provide a global view across all the environments that an application passes through in its deployment pipeline
+        * offer programmatic configuration and execution via a consistent and reliable API
+        * be easy to configure, maintain, and extend
+        * be operationally resilient
+        * provide the existing benefits of Asgard without a migration
+ 
 
 ----
 
@@ -1134,7 +1158,15 @@ Spinnaker Philosophy
 * Make it possible to deploy where you want, when you want 
 
 .. note::
-    * note
+    * Immutable means there’s no chance of a failed config change
+        * Changes are tested before they are deployed
+        * You will always know the state of all your applications
+    * Your platform should be smart enough to know what is going on with your infra at all times; no fire and forget
+    * By automating the stages of your SDLC and defining them in a common tool deployments are always  done the way you intended
+    * Related to last point, it should be easy to use.  For everyone.  You shouldn’t need special AWS, GCP, K8s knowledge to deploy.  You should be able to deploy.
+    * Deployments sometimes go wrong. Spinnaker will catch it the problem is with the cloud, but when a bug slips through in the app being deployed it should take just a click to rollback
+    * Spinnaker is always on, always ready to deploy. Your company may not be ready for 1,000 deployments a day and that’s OK, there are tools in Spinnaker to put up guard rails until you are ready a thousand, or even two thousand deployments a day.  You can get there!
+
 
 ----
 
@@ -1150,7 +1182,20 @@ What Armory Adds
 * Experience running Spinnaker at scale
 
 .. note::
-    * note
+    * Observability - Armory Lighthouse
+    * Enterprise class OSS software - Terraform and Vault from Hashicorp
+    * Pipelines - dinghy?
+    * We are active developers, reviewer, and approvers
+    *We have been working and hiring people with experience only surpassed by Netflix and Google - Enterprise support
+    * Armory Installer
+    * Pluggable Architecture
+    * Armory Lighthouse
+    * Bi-Weekly updates
+    * Enterprise support
+        https://www.armory.io/products/installed-spinnaker
+    * Certified pipelines
+    * SLA Dashboard
+
 
 ----
 
@@ -1185,7 +1230,13 @@ Spinnaker Architecture
 * Kubernetes/AWS/GCP
 
 .. note::
-    * note
+    * https://www.spinnaker.io/reference/architecture/
+    * https://github.com/spinnaker/spinnaker.github.io/pull/1175
+    * go through the flow
+    * Life of a Deployment
+    * Private external resources
+        Redis, SQL, S3, GCS, Jenkins, etc
+
 
 ----
 
@@ -1210,7 +1261,13 @@ Projects & Applications
 =======================
 
 .. note::
-    * note
+    * Need to add a verbal walkthrough here of each Micro Service
+        https://www.spinnaker.io/reference/architecture/
+    * Deck:UI, Gate:API, Igor:Triggers, Echo:Eventing, Orca:Orchestion
+    * Kayenta:Canarying, Rosco:Baking, Clouddriver:Cloud, Front50:persistent storage, Fiat: Authorization, 
+    * Life of a Deployment
+    * Private external resources
+        Redis, SQL, S3, GCS, Jenkins, etc
 
 ----
 
@@ -1230,7 +1287,7 @@ Think of this as your Product
     :align: center
 
 .. note::
-    * note
+    * Walk class through https://training.armory.io/#/search interface
 
 ----
 
@@ -1250,7 +1307,9 @@ Applications map to a single repo
 
 
 .. note::
-    * note
+    * AFTER TALKING THROUGH this go to the UI and show/demo
+    * Menton that we will be doing an exercise after the demo
+
 
 ----
 
@@ -1278,7 +1337,9 @@ Pipeline names are freeform
     :align: center
 
 .. note::
-    * note
+    * pipeline - a series of stages
+    * spaces in the name are OK
+    * This is one of the only places where its OK
 
 ----
 
@@ -1294,7 +1355,8 @@ Pipeline Configuration
 
 
 .. note::
-    * note
+    * Overview of each item.
+    * Triggers up next.
 
 
 ----
@@ -1313,7 +1375,7 @@ Triggers tell Spinnaker when to start a pipeline
     - Other Pipelines
 
 .. note::
-    * note
+    * This is a talk slide, explain all the possible triggers that can be used to start a pipeline.
 
 ----
 
@@ -1333,7 +1395,13 @@ But its a special webhook.
 
 
 .. note::
-    * note
+    * Git trigger for GitHub, BitBucket, etc has the payloads already configured
+
+    * If you use the WebHook trigger yo uwill have to define your own payloads
+
+    * pub/sub you will have to define your payload and attribute constraints
+
+    * pub/sub your ADMIN will have to add subscriptions - https://www.spinnaker.io/reference/halyard/commands/#hal-config-pubsub-google-subscription-edit
 
 ----
 

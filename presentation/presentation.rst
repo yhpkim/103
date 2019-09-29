@@ -604,7 +604,7 @@ What does Kubernetes do?
 * Namespace
 
 .. note::
-    * Five introductory to kubernetes concepts. 
+    * Five introductory kubernetes concepts. 
 
 ----
 
@@ -1250,7 +1250,7 @@ Spinnaker Architecture
     :align: center
 
 .. note::
-    * note
+    * Overview of Spinnaker Architecture
 
 ----
 
@@ -1560,7 +1560,7 @@ Working with Helm
 Helm Chart Artifacts
 ====================
 
-.. image:: https://cl.ly/74afb4c1bbcc
+.. image:: images/helm/helm_artifacts.png 
     :height: 450px
     :width: 1080px
     :align: center
@@ -1577,7 +1577,7 @@ Helm Chart Artifacts
 Baking Manifests
 ================
 
-.. image:: https://cl.ly/863cbb209d9e
+.. image:: images/helm/baking_manifest.png
     :height: 450px
     :width: 1080px
     :align: center
@@ -1597,7 +1597,7 @@ Baking Manifests
 Deploying Manifests
 ===================
 
-.. image:: https://cl.ly/fcfe7f968f5f
+.. image::  images/helm/deploy_configuration.png
     :height: 450px
     :width: 1080px
     :align: center
@@ -1626,7 +1626,7 @@ Kubernetes Health Checks
         * Kubernetes uses a livenes probe to know when to restart a container.
         * Kubernetes uses a readienss probe to knwo when a container is ready to start accepting traffic.
         * Kubernetes uses a startup probe to know when an applciation has started. 
-        
+
 .. note::
     * Go over https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 

@@ -1186,13 +1186,12 @@ What Armory Adds
     * Enterprise class OSS software - Terraform and Vault from Hashicorp
     * Pipelines - dinghy?
     * We are active developers, reviewer, and approvers
-    *We have been working and hiring people with experience only surpassed by Netflix and Google - Enterprise support
+    * We have been working and hiring people with experience only surpassed by Netflix and Google - Enterprise support
     * Armory Installer
     * Pluggable Architecture
     * Armory Lighthouse
     * Bi-Weekly updates
-    * Enterprise support
-        https://www.armory.io/products/installed-spinnaker
+    * Enterprise support - https://www.armory.io/products/installed-spinnaker
     * Certified pipelines
     * SLA Dashboard
 
@@ -1552,6 +1551,7 @@ Working with Helm
 
 .. note::
     * Transition slide for working with helm and Spinnaker
+
 ----
 
 
@@ -1626,6 +1626,7 @@ Kubernetes Health Checks
         * Kubernetes uses a livenes probe to know when to restart a container.
         * Kubernetes uses a readienss probe to knwo when a container is ready to start accepting traffic.
         * Kubernetes uses a startup probe to know when an applciation has started. 
+        
 .. note::
     * Go over https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 

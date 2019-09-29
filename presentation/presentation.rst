@@ -1396,11 +1396,8 @@ But its a special webhook.
 
 .. note::
     * Git trigger for GitHub, BitBucket, etc has the payloads already configured
-
     * If you use the WebHook trigger yo uwill have to define your own payloads
-
     * pub/sub you will have to define your payload and attribute constraints
-
     * pub/sub your ADMIN will have to add subscriptions - https://www.spinnaker.io/reference/halyard/commands/#hal-config-pubsub-google-subscription-edit
 
 ----
@@ -1532,10 +1529,10 @@ Demo - Working with the GitHub UI
 
 ----
 
-:id: exercise-2
+:id: exercise-4
 
-Exercise 2
-==========
+Exercise 4 - To Edit
+====================
 
 1. Create a pipeline that promotes a manifest from dev to production
 2. Create a pipeline that promotes a manifest to production in two clusters concurrenlty
@@ -1552,8 +1549,12 @@ Exercise 2
 Working with Helm
 =================
 
+Spinnaker surfaces a "Bake (Manifest)" stage to turn templates into manifests with the help of a templating engine. 
+
 .. note::
-    * note
+    * This stage is intended to help you package and deploy applications that you own, and are actively developing and redploying frequently.
+    * It is not intended to serve as a one-time installation method for third-party packages. If that is your goal, it's arguably 
+      better to call *helm install* once when bootstrapping your kubernetes cluster. 
 
 ----
 

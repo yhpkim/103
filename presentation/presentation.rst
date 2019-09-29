@@ -1542,6 +1542,7 @@ Exercise 4 - To Edit
 .. note::
     * note
 
+
 ----
 
 :id: working-with-helm
@@ -1549,23 +1550,24 @@ Exercise 4 - To Edit
 Working with Helm
 =================
 
-Spinnaker surfaces a "Bake (Manifest)" stage to turn templates into manifests with the help of a templating engine. 
-
 .. note::
-    * This stage is intended to help you package and deploy applications that you own, and are actively developing and redploying frequently.
-    * It is not intended to serve as a one-time installation method for third-party packages. If that is your goal, it's arguably 
-      better to call *helm install* once when bootstrapping your kubernetes cluster. 
-
+    * Transition slide for working with helm and Spinnaker
 ----
+
 
 :id: helm-chart-artifacts
 
 Helm Chart Artifacts
 ====================
 
-The helm chart that you will be deploying is stored as a .tar.gz archive. It is produced by running `helm package /path/to/chart`. 
+.. image:: https://cl.ly/74afb4c1bbcc
+    :height: 450px
+    :width: 1080px
+    :align: center
+ 
 .. note::
-    * note
+    * The helm chart that you will be deploying is stored as a .tar.gz archive. It is produced by running `helm package /path/to/chart`. 
+    * It is created in the configuration stage as an expected artifact.
 
 ----
 
@@ -1575,8 +1577,18 @@ The helm chart that you will be deploying is stored as a .tar.gz archive. It is 
 Baking Manifests
 ================
 
+.. image:: https://cl.ly/863cbb209d9e
+    :height: 450px
+    :width: 1080px
+    :align: center
+
 .. note::
-    * note
+    * Spinnaker surfaces a "Bake (Manifest)" stage to turn templates into manifests with the help of a templating engine. 
+    * The baked manifest is then deployed as an artifact to the Deploy(Manifest) stage and is pushed to the K8s cluster. 
+    * This stage is intended to help you package and deploy applications that you own, and are actively developing and redploying frequently.
+    * It is not intended to serve as a one-time installation method for third-party packages. If that is your goal, it's arguably 
+      better to call *helm install* once when bootstrapping your kubernetes cluster. 
+
 
 ----
 
@@ -1585,8 +1597,13 @@ Baking Manifests
 Deploying Manifests
 ===================
 
+.. image:: https://cl.ly/fcfe7f968f5f
+    :height: 450px
+    :width: 1080px
+    :align: center
+
 .. note::
-    * note
+    * The deploy stage runs and deploys every resource in the helm chart to the cluster at once. 
 
 ----
 
@@ -1605,8 +1622,12 @@ Working with Services
 Kubernetes Health Checks
 ========================
 
+    Liveness, Readiness and Startup Probes
+        * Kubernetes uses a livenes probe to know when to restart a container.
+        * Kubernetes uses a readienss probe to knwo when a container is ready to start accepting traffic.
+        * Kubernetes uses a startup probe to know when an applciation has started. 
 .. note::
-    * note
+    * Go over https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 
 ----
 
@@ -1616,7 +1637,7 @@ Pipeline Strategies
 ===================
 
 .. note::
-    * note
+    * Transition Slide for Pipeline Strategies
 
 ----
 
@@ -1631,7 +1652,7 @@ Promotional Pipelines
     :align: center
 
 .. note::
-    * note
+    * One environment to another, bake, deploy, test in dev; trigger a new pipeline that deploys/tests in test env; then prod
 
 ----
 
@@ -1646,7 +1667,7 @@ Branching Pipelines
     :align: center
 
 .. note::
-    * note
+    * Deploy/do multiple things concurrently, come back together for a manual judgement, do it again for another env all in one pipline
 
 ----
 
@@ -1661,7 +1682,7 @@ Halting Pipelines
     :align: center
 
 .. note::
-    * note
+    * Use a manual judgement or a conditional stage
 
 ----
 
@@ -1671,7 +1692,7 @@ Multi-Cluster Pipelines
 =======================
 
 .. note::
-    * note
+    *  A branching pipeline that deploys to multiple clusters concurrently
 
 ----
 
@@ -1681,7 +1702,7 @@ Spring Expression Language(SpEL) Introduction
 =============================================
 
 .. note::
-    * note
+    * Transition Slide for SpEL
 
 ----
 

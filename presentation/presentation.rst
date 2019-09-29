@@ -1563,6 +1563,7 @@ Spinnaker surfaces a "Bake (Manifest)" stage to turn templates into manifests wi
 Helm Chart Artifacts
 ====================
 
+The helm chart that you will be deploying is stored as a .tar.gz archive. It is produced by running `helm package /path/to/chart`. 
 .. note::
     * note
 
@@ -1702,7 +1703,12 @@ Can do much more
     * Embed java/groovy
 
 .. note::
-    * note
+    * The expression language is a powerful tool that you can use to add logic and decision-making to your pipelines. While a lot of the time you will probably use it to evaluate variables, it can do a lot more. You can write straight Java/Groovy into it. This means you can do transformations, filters, maps, etc. You can use it to branch your pipeline into different directions.
+    * Some of the most common uses include 
+        * Getting build information from Jenkins
+        * Passing image names from one stage to another
+        * Retrieving a user's manual judgment responses
+
 
 ----
 
@@ -1744,7 +1750,10 @@ Expression Tools - Helper Functions
     :align: center
 
 .. note::
-    * note
+    * Builtin helper functions to simplify some common use cases
+    * These functions allow you to do things like access a particular stage by name, strip non-alphanumerical characters out of a string or parse JSON
+    * Adding a pound sign (#) within your pipeline expression displays a list of tall of the helper functions that are available
+
 
 ----
 
@@ -1760,7 +1769,10 @@ Expression Tools - Helper Properties
 
 
 .. note::
-    * note
+    * Helper properties are variables which refer to global information about the curren pipeline execution
+    * Example if you've set up a Jenkins trigger and want to know which build triggered the curren pipeline, you could access that information with the expression ${trigger["buildInfo"]["number"]}
+    * quickly list available helper properties and stages you can enter a question mark into your pipeline expression.
+
 
 ----
 
@@ -1773,6 +1785,50 @@ Conditional SpEL
     :height: 450px
     :width: 1080px
     :align: center
+
+.. note::
+    * note
+
+----
+
+:id: expression-tools-context-values
+
+Expression Tools - Context Values
+=================================
+
+
+.. note::
+    * note
+
+----
+
+:id: expression-tools-property-files
+
+Expression Tools - Property Files
+=================================
+
+
+.. note::
+    * note
+
+----
+
+:id: expression-tools-special-characters
+
+Expression Tools - Special Characters
+=====================================
+
+
+.. note::
+    * note
+
+----
+
+:id: expression-tools-debug-more
+
+Expression Tools - Debug & More
+===============================
+
 
 .. note::
     * note
@@ -1831,7 +1887,7 @@ Debugging Deployments
 
 :id: exercise-3
 
-Exercise 3
+Exercise 4
 ==========
 
 1. Create a pipeline that takes an action only if a condition is met

@@ -1607,24 +1607,14 @@ Deploying Manifests
 
 ----
 
-:id: working-with-services
-
-Working with Services
-=====================
-
-.. note::
-    * note
-
-----
-
 :id: health-checks-kubernetes
 
 Kubernetes Health Checks
 ========================
 
     Liveness, Readiness and Startup Probes
-        * Kubernetes uses a livenes probe to know when to restart a container.
-        * Kubernetes uses a readienss probe to knwo when a container is ready to start accepting traffic.
+        * Kubernetes uses a liveness probe to know when to restart a container.
+        * Kubernetes uses a readiness probe to know when a container is ready to start accepting traffic.
         * Kubernetes uses a startup probe to know when an applciation has started. 
 
 .. note::
@@ -1648,7 +1638,7 @@ Promotional Pipelines
 =====================
 
 .. image:: images/promotional_pipeline.png
-    :height: 450px
+    :height: 350px
     :width: 1080px
     :align: center
 
@@ -1663,7 +1653,7 @@ Branching Pipelines
 =====================
 
 .. image:: images/branching_pipeline.png
-    :height: 450px
+    :height: 350px
     :width: 1080px
     :align: center
 
@@ -1678,7 +1668,7 @@ Halting Pipelines
 =================
 
 .. image:: images/halting_pipeline.png
-    :height: 450px
+    :height: 550px
     :width: 1080px
     :align: center
 
@@ -1818,9 +1808,14 @@ Conditional SpEL
 Expression Tools - Context Values
 =================================
 
+* Context values are similar to helper properties, except that they are specific to a particular stage
+* Includes the stage name, status, start or end time and so on
+* Use context values in combination with the #stage helper function to access properties fo a particular stage
+
+* example, ${#stage("Deploy to Prod")["type"]} returns the stage type
 
 .. note::
-    * note
+    *  Great for passing info betwen stages
 
 ----
 
@@ -1828,10 +1823,11 @@ Expression Tools - Context Values
 
 Expression Tools - Property Files
 =================================
-
+* A *property file* is a file containing a list of variables that you would liek to pass to your pipeline
+* Can be a Java .properties file, YML, or JSON
 
 .. note::
-    * note
+    * Spinnaker reads the contents of this file and adds this specified variables to the pipeline context
 
 ----
 
@@ -1840,6 +1836,11 @@ Expression Tools - Property Files
 Expression Tools - Special Characters
 =====================================
 
+* Use pipeline expressions to set a default value for a field with the characters ?:
+* Example, ${parameters["region"] ?: 'us-east-1'} sets the region to us-east-1 unless otherwise spcified. 
+
+* You can filter maps using .?
+* Example, return a list of all of the bake stages in your pipeline, use the expression ${execution["stages"].?[type == "bake"]}
 
 .. note::
     * note
@@ -1851,16 +1852,10 @@ Expression Tools - Special Characters
 Expression Tools - Debug & More
 ===============================
 
-
-.. note::
-    * note
-
-----
-
-:id: stateful-apps
-
-Deploying Stateful Applications
-===============================
+* Can debug SPeL issues by viewing the source tab in the failed pipeline's execution history
+* Able to access whitelisted java classes (see link below)
+    * example: generate the current data in MM-dd-yyyy format
+    ${ new java.text.SimpleDateFormat("MM-dd-yyyy").format(new java.util.Date())}
 
 .. note::
     * note

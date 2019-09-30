@@ -482,23 +482,12 @@ Build, Ship, and Run
 
 Exercise 1 - docker
 ===================
+Build, Deploy, and Run a Docker Container
+-----------------------------------------
 
-Make a Change and then....
+.. raw :: html
 
-.. code:: python
-
-    git clone git@github.com:mcgonagle/103.git
-
-    docker build --tag=mcgonagle/103 . 
-    
-    docker run -it --rm -p "9000:9000" mcgonagle/103
-
-    docker login
-
-    docker push mcgonagle/103:latest
-
-    docker run -it --rm -p "9000:9000" mcgonagle/103
-
+    <script src="https://gist.github.com/mcgonagle/4575f24c1cc41ee8e179a5888cbb8ce3.js"></script>
 
 .. note::
     * docker build, ship, and run workflow. This workflow has the student learning how to build a docker container from a Dockerfile, then shipping it to 
@@ -694,33 +683,14 @@ Namespace
 Exercise 2 - K8s
 ================
 
-.. code:: python
+.. raw:: html
 
-    kubectl -n default run hundredthree --image=mcgonagle/103
-
-    kubectl -n default expose deployment/hundredthree --port=9000 --target-port=9000
-
-    kubectl -n default port-forward services/hundredthree 9000:9000
+    <script src="https://gist.github.com/mcgonagle/1a1ea84eb2422ec5e119baabaee707ad.js"></script>
 
 .. note::
     * You have built and shipped the 103 container in the previous exercise, now it is time to deploy it into your k8s single node cluster running inside
         the docker for desktop app. The above imperative commands push and then expose the 103 service to the local host making the container available 
         to the end user through kubernetes.
-
-----
-
-Exercise 2 cont. - K8s
-======================
-
-.. code:: python
-
-    kubectl -n default delete service hundredthree
-
-    kubectl -n default delete deployment hundredthree
-
-
-.. note::
-    * Steps to delete the service and the deployment. 
 
 ----
 
@@ -856,75 +826,13 @@ Kubernetes Loadbalancer Manifest
 Exercise 3 - manifests
 ======================
 
-.. code:: python
+.. raw:: html
 
-    git clone https://github.com/mcgonagle/103.git
-    cd 103/manifests
-    edit manifests namespaces.yml, deployment.yml and loadbalancer.yml 
-    edit the namespace to reflect your last name
+    <script src="https://gist.github.com/mcgonagle/5ab461d77dffb1853b44871060f7471c.js"></script>
+
 
 .. note::
     * Clone https://github.com/mcgonagle/103.git, edit the namespace.yml, deployment.yml, and loadbalancer.yml files to reflect a namespace for the student.
-
-----
-
-
-Exercise 3 cont. - manifests
-============================
-
-.. code:: python
-
-    kubectl get ns --all-namespaces
-    kubectl create -f namespace.yml
-    kubectl get ns --all-namespaces
-
-.. note::
-    * run a get ns to see the namespaces available in the cluster. Then do a declarative create namespace with the manifest namespace.yml and then see what changed.
-
-
-----
-
-Exercise 3 cont. - manifests
-============================
-
-.. code:: python
-
-    kubectl get deployment -n mcgonagle
-    kubectl get pods -n mcgonagle
-    kubectl create -f deployment.yml
-    kubectl get deployment -n mcgonagle
-    kubectl get pods -n mcgonagle
-
-
-.. note::
-    * Look at the pods and deployments and then run the manifest and then see what has changed. 
-
-----
-
-Exercise 3 cont. - manifests
-============================
-
-.. code:: python
-
-    kubectl get services -n mcgonagle
-    kubectl create -f loadbalancer.yml
-    kubectl get services -n mcgonagle
-
-.. note::
-    * Look at the services and then install a LoadBalancer service and then look at what has changed. 
-
-----
-
-Exercise 3 cont. - manifests
-============================
-
-.. code:: python
-
-    kubectl delete service hundredthree-0 -n mcgonagle
-    kubectl delete deployment 103 -n mcgonagle
-
-.. note::
-    * Delete the LoadBalancer and the deployment.
 
 ----
 
@@ -963,21 +871,9 @@ Helm is a package manager for K8s
 Exercise 4 - helm
 =================
 
-.. code:: python
+.. raw:: html
 
-    kubectl -n kube-system create serviceaccount tiller
-
-    helm init --service-account tiller --history-max 200 --upgrade
-
-    cd helm
-
-    helm install --dry-run --debug hundredthree
-
-    helm install --debug hundredthree
-
-    helm list
-
-    helm delete --purge doltish-condor
+    <script src="https://gist.github.com/mcgonagle/8d94cc036b5a382fae9bc9944dd25522.js"></script>
 
 
 .. note::
@@ -1331,7 +1227,7 @@ Creating a Pipeline
 Pipeline names are freeform
 
 .. image:: images/pipeline.png
-    :height: 640px
+    :height: 450px
     :width: 1080px
     :align: center
 
@@ -1348,7 +1244,7 @@ Pipeline Configuration
 ======================
 
 .. image:: images/pipeline_configuration.png
-    :height: 640px
+    :height: 450px
     :width: 1080px
     :align: center
 
@@ -1398,6 +1294,17 @@ But its a special webhook.
     * If you use the WebHook trigger yo uwill have to define your own payloads
     * pub/sub you will have to define your payload and attribute constraints
     * pub/sub your ADMIN will have to add subscriptions - https://www.spinnaker.io/reference/halyard/commands/#hal-config-pubsub-google-subscription-edit
+
+----
+
+:id: dockerhub-automated-trigger
+
+Automated Trigger Demo
+======================
+
+
+.. note::
+    * Demo of a dockerhub automated trigger
 
 ----
 
@@ -1517,7 +1424,7 @@ Demo - Working with the GitHub UI
 =================================
 
 .. image:: images/demo_github.png
-    :height: 450px
+    :height: 350px
     :width: 1080px
     :align: center
 
@@ -1530,14 +1437,69 @@ Demo - Working with the GitHub UI
 
 :id: exercise-4
 
-Exercise 4 - To Edit
-====================
+Exercise 4
+==========
+Create a namespace in three clusters
+------------------------------------
 
-1. Create a pipeline that promotes a manifest from dev to production
-2. Create a pipeline that promotes a manifest to production in two clusters concurrenlty
-3. Create a pipeline that promotes to two production clusters sequentially with a manual judgment
-4. Create a pipeline that takes an action only if a condition is met
+.. raw :: html
 
+   <script src="https://gist.github.com/mcgonagle/1462712433ed39f230f300df00a7b425.js"></script>>
+
+.. note::
+    * note
+
+
+----
+
+:id: exercise-5
+
+Exercise 5
+==========
+Create a pipeline that promotes a manifest to production in two clusters concurrently
+-------------------------------------------------------------------------------------
+
+.. raw :: html
+
+    <script src="https://gist.github.com/mcgonagle/ae9dee8a80a729de6ed092edffb028c3.js"></script>
+
+
+
+.. note::
+    * note
+
+
+----
+
+:id: exercise-6
+
+Exercise 6
+==========
+Create a pipeline that promotes to two production clusters sequentially with a manual judgment
+----------------------------------------------------------------------------------------------
+
+.. raw :: html
+
+  <script src="https://gist.github.com/mcgonagle/fa018b9176ea5a62bc00cf0acd387986.js"></script>
+
+
+.. note::
+    * note
+
+
+----
+
+:id: exercise-7
+
+Exercise 7
+==========
+Create a pipeline that takes an action only if a condition is met
+-----------------------------------------------------------------
+
+.. raw :: html
+
+    <script src="https://gist.github.com/mcgonagle/6bb72be419b0a9f94fba13bc8cd7deac.js"></script>
+    
 .. note::
     * note
 
@@ -1902,15 +1864,17 @@ Debugging Deployments
 
 ----
 
-:id: exercise-3
+:id: exercise-8
 
-Exercise 4
+Exercise 8 
 ==========
+Break a pipeline and debug it
+-----------------------------
 
-1. Create a pipeline that takes an action only if a condition is met
-2. Create a pipeline that deploys a stateful application, observe what happens when updated
-3. Break a pipeline and debug it
+.. raw :: html
 
+   <script src="https://gist.github.com/mcgonagle/e73692f8b3b583b8086881d0b9938e1c.js"></script>
+    
 .. note::
     * note
 
@@ -1939,7 +1903,7 @@ Solutions Architect
 -------------------
 thomas.mcgonagle@armory.io
 --------------------------
-@mcgonagle
+https://go.armory.io/thomas
 ----------
 
 .. image:: images/thomas_mcgonagle.png

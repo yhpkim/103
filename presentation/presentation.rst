@@ -44,7 +44,7 @@ Agenda
 * Intro, Goals, Assumptions
 * Background & Philosophy & Terminology
 * Docker and Kubernetes Overview
-* Spinnaker Archtecture Overview
+* Spinnaker Architecture Overview
 * Creating a Spinnaker Application
 
 .. note::
@@ -61,7 +61,6 @@ Agenda cont.
 * Working with Helm
 * Pipeline Strategies
 * Introduction to Spring Expression Language (SpEL)
-* Deploying Stateful Applications
 * Debugging Pipelines
 
 .. note::

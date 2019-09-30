@@ -13,7 +13,7 @@ docker build --tag=mcgonagle/103 .
 
 To Run:
 ``` bash
-docker run -it --rm -p "9000:9000" -v mcgonagle/103
+docker run -it --rm -p "9000:9000" mcgonagle/103
 ```
 
 In a web browser, go to <http://localhost:9000> to view your presentation.

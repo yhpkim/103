@@ -19,7 +19,7 @@ spec:
         run: "103"
     spec:
       containers:
-      - image: mcgonagle/103
+      - image: yhpkim/103
         name: "103"
         resources: {}
 status: {}
